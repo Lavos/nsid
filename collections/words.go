@@ -1,6 +1,6 @@
-package main
+package collections
 
-var words = []string{
+var Words = []string{
 	"able",
 	"acid",
 	"acre",
@@ -258,4 +258,3 @@ var words = []string{
 	"zen",
 	"zit",
 }
-
