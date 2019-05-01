@@ -1,9 +1,9 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"os"
-	"flag"
 
 	"github.com/Lavos/nsid/collections"
 	"github.com/Lavos/nsid/serializables"
@@ -11,10 +11,10 @@ import (
 
 var (
 	suppress_newline = flag.Bool("n", false, "If passed, suppress newline after outputting generated id.")
-	format = flag.String("format", "base64", "Encoding format for the generated id. Formats: all unixnano phrase base16 hex base62 base64 basealpha base85")
+	format           = flag.String("format", "base64", "Encoding format for the generated id. Formats: all unixnano phrase base16 hex base62 base64 basealpha base85")
 )
 
-func main () {
+func main() {
 	flag.Parse()
 	b, n := serializables.Gen()
 

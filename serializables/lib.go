@@ -1,11 +1,11 @@
 package serializables
 
 import (
-	"time"
 	"bytes"
-	"encoding/binary"
 	"encoding/base64"
+	"encoding/binary"
 	"strings"
+	"time"
 
 	"github.com/Lavos/nsid/collections"
 	"github.com/eknkc/basex"
@@ -15,7 +15,7 @@ type Serializable interface {
 	Serialize([]byte) string
 }
 
-type SerializableFunc func (b []byte) string
+type SerializableFunc func(b []byte) string
 
 func (f SerializableFunc) Serialize(b []byte) string {
 	return f(b)
